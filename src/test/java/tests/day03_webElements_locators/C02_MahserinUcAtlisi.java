@@ -37,7 +37,6 @@ public class C02_MahserinUcAtlisi {
         // islem yapilmis olsa bile kodlari bekletmeye devam eder
         // bunun icin toplu calistirmalarda kullanissizdir
 
-        //
 
 
 
