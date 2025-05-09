@@ -55,7 +55,11 @@ public class C01_ByClassName {
         // acilan urun sayfasindaki urun aciklamasinda
         // case sensitive olmaksizin "phone" bulundugunu test edin
 
-        WebElement urunSayfasindaAciklamaElementi = driver.findElement(By.className("prod-detail"));
+        // WebElement urunSayfasindaAciklamaElementi = driver.findElement(By.className("prod-detail"));
+
+        WebElement urunSayfasindaAciklamaElementi =
+                driver.findElement(By.xpath("//div[@class=' heading-sm mb-4']"));
+
 
         String expectedUrunIcerik = "phone";
         String actualUrunAciklamasi = urunSayfasindaAciklamaElementi.getText().toLowerCase();
