@@ -2,6 +2,7 @@ package tests.day05_xPath_cssLocator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -38,7 +39,20 @@ public class C02_XPath {
 
 
         //7-  price range filtresinde min degere 40, max degere 200 yazip filtreleyin
+        WebElement minPriceKutusu = driver.findElement(By.xpath("//*[@*='form-control minPrice']"));
+        WebElement maxPriceKutusu = driver.findElement(By.xpath("//*[@*='form-control maxPrice']"));
 
+        // min ve max kutularina sayi gonderdigimizde
+        // kutuda var olan 0'in gonderdigimiz sayinin sonuna eklendigini gorduk
+        // once o 0'i silelim
+        minPriceKutusu.clear();
+        maxPriceKutusu.clear();
+        Thread.sleep(5000);
+        minPriceKutusu.sendKeys("40");
+        maxPriceKutusu.sendKeys("200");
+
+        // filtreleyin
+        driver.findElement(By.xpath("//*[@*='price-range-button']")).click();
 
         //8-  filtreleme sonucunda urun bulunabildigini test edin
 
