@@ -40,5 +40,6 @@ public class C05_XPath {
             System.out.println("add remove yazi testi PASSED");
         }else System.out.println("add remove yazi testi FAILED");
 
+        driver.quit();
     }
 }
